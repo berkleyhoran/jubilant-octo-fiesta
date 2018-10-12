@@ -8,13 +8,19 @@
      background-color:#6D909C;
      height:10%;
      width:100%;
+     display:flex;
+     justify-content:center;
+     align-content: center;
+   }
+   .navelem{
+     font-size:70px;
+     color:white;
    }
    #cardmain{
      float:right;
      width:75%;
-     height:100%;
      display:flex;
-     justify-content: space-evenly;
+     justify-content: space-around;
      flex-flow: column;
      align-items: center;
    }
@@ -44,16 +50,25 @@
      background-color:#1b202d;
    }
    #delete{
+     color:white;
+     margin-left:23px;
      align-self: flex-end;
+     justify-self: center;
+     position: absolute;
    }
    .todo{
      margin:0px;
+     margin-left:50px;
      width:300px;
      font-size: 30px;
+     position: absolute;
    }
    .card {
+    border-right:30px #252C3F solid;
     display:flex;
+    flex-wrap: none;
     flex-flow:column;
+    justify-content: center;
     font-family: 'Open Sans', sans-serif;
     background-color:white;
     width:75%;
