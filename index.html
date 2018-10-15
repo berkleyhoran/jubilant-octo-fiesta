@@ -1,5 +1,5 @@
 <!DOCTYPE <!DOCTYPE html>
-<html>
+<html onload="set();">
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -7,6 +7,7 @@
     <title>Todo App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -17,6 +18,8 @@
         <div id="sidecontrol">
             <div class="sideelem" id="addtask" onclick="addtask();">   Add Tasks       +</div>
             <div class="sideelem" id="deletetask">   Delete Tasks       -</div>
+            <div class="sideelem" id="deletetask">   Mark Complete       </div>
+            <div class="sideelem" id="deletetask" onclick="clearList();">   Clear List       </div>
     
         </div>
 <div id="cardmain">

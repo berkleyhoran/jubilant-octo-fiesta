@@ -3,17 +3,23 @@
    html, body{
      margin:0 0 0 0;
    }
+
+   h1{
+     padding-left:100px;
+     font-family: 'Open Sans', sans-serif;
+     font-size:50px;
+   }
    #matnav{
     font-family: 'Open Sans', sans-serif;
      background-color:#6D909C;
-     height:10%;
+     height:5vw;
      width:100%;
      display:flex;
      justify-content:center;
      align-content: center;
    }
    .navelem{
-     font-size:70px;
+     font-size:3vw;
      color:white;
    }
    #cardmain{
@@ -49,6 +55,7 @@
      color:#a9cea1;
      background-color:#1b202d;
    }
+  
    #delete{
      color:white;
      margin-left:23px;
@@ -56,15 +63,20 @@
      justify-self: center;
      position: absolute;
    }
+   #delete:hover{
+    color:#a9cea1;
+    cursor:pointer;
+  }
    .todo{
      margin:0px;
-     margin-left:50px;
+     margin-left:100px;
      width:300px;
      font-size: 30px;
      position: absolute;
    }
    .card {
-    border-right:30px #252C3F solid;
+    /*border-right:30px #252C3F solid;*/
+    margin: 50px 0 0 0;
     display:flex;
     flex-wrap: none;
     flex-flow:column;
@@ -76,7 +88,29 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
-  
   .card:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  #tasktitle{
+    width:150%;
+    height:50px;
+    font-size: 30px;
+  }
+  #submit{
+    align-content: center;
+    width:50px;
+    margin-left:50px;
+    height:50px;
+    background-color:#a9cea1;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  #submit:hover{
+    color:black;
+    background-color:white;
+    cursor:pointer;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
