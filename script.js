@@ -8,9 +8,10 @@ function addtask(){
     
     $("#cardmain").append(`<div class='card'></i>
     
-    <div id="submit" onclick="inlay(this);"><i class="fas fa-check" id="checksub"></i></div><p class='todo'><input id="tasktitle" class="text"></input></p>
+    <span id="cardspace"><div id="submit" onclick="inlay(this);"><i class="fas fa-check" id="checksub"></i></div>
+    <input id="tasktitle" class="text"></input><div class="blacksquare"><input type="checkbox" class="checkmark"></div></div></span>
   
-    <span style="flex-wrap:nowrap;"></div>`)
+    `)
  
 
 
@@ -26,7 +27,7 @@ function inlay(element){
 
     console.log(element);
 
-    $(element).parent().html(`<h1>${task}</h1>`)
+    $(element).parent().html(`<h1>${task}</h1><div class="blacksquare"><input type="checkbox" class="checkmark"></div></div>`)
 }
 
 function clearList(){
