@@ -1,6 +1,14 @@
 var lists = [];
 var viewlist;
 var listid = 0;
+
+function deleteselected(){
+   
+    $('form input:checked').parents('card').remove();
+    
+ 
+}
+
 $("#cardmain").sortable({
     handle:"#draggable"
 })
@@ -17,7 +25,9 @@ function addtask(){
     
     <input type="checkbox" class="checkmark" onclick="selectcard(this);">
     
-     <i class="fas fa-times-circle" onmouseover="this.parentNode.style.background='red'" onmouseleave="selectcard(this)"  onclick="removecard(this);"></i>
+    <i class="fas fa-times-circle" onmouseover="this.parentNode.style.background='red'" 
+    
+    onmouseleave="selectcard(this)"  onclick="removecard(this);"></i>
     
     <i class="fas fa-arrows-alt" id="draggable"></i></div>
   
@@ -25,6 +35,7 @@ function addtask(){
 
 
 } 
+
 function inlay(element){
     
     let listid = Number(viewlist);
@@ -41,11 +52,15 @@ function inlay(element){
 
     lists[listid].items.push(task);
 
+    var ref = lists[listid].items.indexOf(task);
+
     $(element).parent().html(`<h1>${task}</h1><div class="blacksquare">
     
     <input type="checkbox" class="checkmark" onclick="selectcard(this);">
     
-    <i class="fas fa-times-circle" onmouseover="this.parentNode.style.background='red'" onmouseleave="selectcard(this);" onclick="removecard(this);></i>
+    <i class="fas fa-times-circle" onmouseover="this.parentNode.style.background='red'" 
+    
+    onmouseleave="selectcard(this);" onclick="removecard(this); id="${ref}"></i>
     
     <i class="fas fa-arrows-alt" id="draggable"></i>
     
@@ -59,8 +74,12 @@ function clearList(){
 }
 
 function removecard(thiscard){
+
+    
     console.log(thiscard);
+    splice(lists[viewlist].item[1])
     $(thiscard).parent().parent().parent().remove()
+
 }
 
 function selectcard(selectedcard){
@@ -87,9 +106,7 @@ function selectcard(selectedcard){
     
 }
 
-function deleteselected(){
-    
-}
+
 
 function createlist(){
 
@@ -112,7 +129,9 @@ function createlist(){
     
     
     if(listname.length > 1){
-        $("#matnav").append(`<div class="navelem" id="${newlist.id}" onclick="setcurrentlist(this);">${newlist.name}</div>`)
+        $("#matnav").append(`<div class="navelem" id="${newlist.id}" 
+        
+        onclick="setcurrentlist(this);">${newlist.name}</div>`)
     }
 
 
@@ -141,11 +160,14 @@ function renderlist(rend){
     
     <input type="checkbox" class="checkmark" onclick="selectcard(this);">
     
-    <i class="fas fa-times-circle" onmouseover="this.parentNode.style.background='red'" onmouseleave="selectcard(this);" onclick="removecard(this);></i>
+    <i class="fas fa-times-circle" onmouseover="this.parentNode.style.background='red'" 
+    
+    onmouseleave="selectcard(this);" onclick="removecard(this);></i>
     
     <i class="fas fa-arrows-alt" id="draggable"></i>
     
     </div>`)
+
 
 }
     

@@ -2,7 +2,7 @@
 <html onload="set();">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Todo App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,10 +21,10 @@
                 </div>
         <div id="sidecontrol">
             <div class="sideelem" id="addtask" onclick="addtask();">Add Tasks +</div>
-            <div class="sideelem" id="deletetask" onclick="deleteselected();">Delete Selected Tasks -</div>
-            <div class="sideelem" id="deletetask">Mark Complete</div>
-            <div class="sideelem" id="deletetask" onclick="clearList();">Clear List</div>
-            <div class="sideelem" id="deletetask"class="showhide"><div id="add"  onclick="createlist();" >Add List   </div><input id="listname"/> </div>
+            <div class="sideelem" id="deleteselected" onclick="deleteselected();">Delete Selected Tasks -</div>
+            <div class="sideelem">Mark Complete</div>
+            <div class="sideelem" onclick="clearList();">Clear List</div>
+            <div class="sideelem" class="showhide"><div id="add"  onclick="createlist();" >Add List   </div><input id="listname"/> </div>
         </div>
 
                 <div id="cardmain">
